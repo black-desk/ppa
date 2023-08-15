@@ -1,0 +1,32 @@
+on:
+  push:
+jobs:
+  update-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install github-apt-repos.
+        run: |
+          sudo apt update
+          sudo apt install python-pip dpkg-dev apt-utils gpg
+          cd $(
+            mktemp -d /tmp/github-apt-repos-XXXXXX || exit 255
+          ) || exit 255
+
+          git clone https://github.com/black-desk/github-apt-repos || exit 255
+          cd github-apt-repos
+          pipx install --user -U --upgrade-strategy=eager -e .
+      - name: Run github-apt-repos
+        run: |
+          for gitrepo in $(find -type d ./repos)
+          do
+            cd ${gitrepo} || exit 255
+            github-apt-repos
+          done
+      - uses: black-desk/freshrss-backup@v1
+        with:
+          base_url: ${{ secrets.freshrss_url }}
+          username: ${{ secrets.freshrss_username }}
+          password: ${{ secrets.freshrss_password }}
+          target: freshrss
+      - uses: stefanzweifel/git-auto-commit-action@v4
