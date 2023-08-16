@@ -15,18 +15,16 @@ jobs:
 
           git clone https://github.com/black-desk/github-apt-repos || exit 255
           cd github-apt-repos
-          pipx install --user -U --upgrade-strategy=eager -e .
-      - name: Run github-apt-repos
+          pipx install .
+      - name: Download all files in watched git repos.
         run: |
-          for gitrepo in $(find -type d ./repos)
-          do
-            cd ${gitrepo} || exit 255
-            github-apt-repos
-          done
-      - uses: black-desk/freshrss-backup@v1
-        with:
-          base_url: ${{ secrets.freshrss_url }}
-          username: ${{ secrets.freshrss_username }}
-          password: ${{ secrets.freshrss_password }}
-          target: freshrss
-      - uses: stefanzweifel/git-auto-commit-action@v4
+          mkdir debs || exit 255
+          cat list.json | jq .repos -r | xargs -I \{\} \
+            gh release download -p "*" -D debs -R \{\}
+      - name: Run github-apt-repos.
+        run: |
+          github-apt-repos \
+            --github-delete-existing \
+            --deb-dir debs \
+            --github-apt-repo black-desk/ppa \
+            --github-token ${{ secrets.GITHUB_TOKEN }}
