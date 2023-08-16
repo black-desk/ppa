@@ -24,7 +24,7 @@ jobs:
 
           mkdir debs || exit 255
           cat list.json | jq -r .repos[]  | xargs -I \{\} \
-            gh release download -p "*" -D debs -R \{\}
+            gh release download -p "*.deb" -D debs -R \{\}
       - name: Import GPG private key
         uses: crazy-max/ghaction-import-gpg@v5
         with:
