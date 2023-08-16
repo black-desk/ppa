@@ -7,6 +7,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install github-apt-repos.
         run: |
+          set +x
           sudo apt update
           sudo apt install dpkg-dev apt-utils gpg libapt-pkg-dev
 
@@ -21,11 +22,15 @@ jobs:
         env: 
           GH_TOKEN: ${{ github.token }}
         run: |
+          set +x
+
           mkdir debs || exit 255
           cat list.json | jq -r .repos[]  | xargs -I \{\} \
             gh release download -p "*" -D debs -R \{\}
       - name: Run github-apt-repos.
         run: |
+          set +x
+
           github-apt-repos \
             --github-delete-existing \
             --deb-dir debs \
