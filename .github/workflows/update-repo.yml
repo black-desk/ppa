@@ -22,7 +22,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir debs || exit 255
-          cat list.json | jq .repos -r | xargs -I \{\} \
+          cat list.json | jq -r .repos[]  | xargs -I \{\} \
             gh release download -p "*" -D debs -R \{\}
       - name: Run github-apt-repos.
         run: |
