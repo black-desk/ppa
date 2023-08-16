@@ -44,4 +44,4 @@ jobs:
             --github-apt-repo black-desk/ppa \
             --github-token ${{ secrets.GITHUB_TOKEN }} \
             --gpg-user-id ppa@black-desk.cn \
-            --github-release-prefix=$(date +%m-%d-%y)
+          gh release create apt debs/*
