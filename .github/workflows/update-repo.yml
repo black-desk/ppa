@@ -2,6 +2,8 @@ on:
   push:
 jobs:
   update-repo:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
