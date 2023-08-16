@@ -27,10 +27,13 @@ jobs:
           mkdir debs || exit 255
           cat list.json | jq -r .repos[]  | xargs -I \{\} \
             gh release download -p "*" -D debs -R \{\}
-      - name: Import GPG key
+      - name: Import GPG private key
         uses: crazy-max/ghaction-import-gpg@v5
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+      - name: Import GPG public key
+        run: |
+          gpg --import ./pub.key
       - name: Run github-apt-repos.
         run: |
           set +x
@@ -40,5 +43,4 @@ jobs:
             --deb-dir debs \
             --github-apt-repo black-desk/ppa \
             --github-token ${{ secrets.GITHUB_TOKEN }} \
-            --gpg-user-id ppa@black-desk.cn \
-            --gpg-pub-key pub.key
+            --gpg-user-id ppa@black-desk.cn
