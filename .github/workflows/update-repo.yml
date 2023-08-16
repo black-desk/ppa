@@ -11,13 +11,11 @@ jobs:
           sudo apt update
           sudo apt install dpkg-dev apt-utils gpg libapt-pkg-dev
 
-          cd $(
-            mktemp -d /tmp/github-apt-repos-XXXXXX || exit 255
-          ) || exit 255
+          cd /tmp || exit 255
 
           git clone https://github.com/black-desk/github-apt-repos || exit 255
           cd github-apt-repos
-          pipx install .
+          make
       - name: Download all files in watched git repos.
         env: 
           GH_TOKEN: ${{ github.token }}
@@ -37,8 +35,8 @@ jobs:
       - name: Run github-apt-repos.
         run: |
           set +x
-
-          github-apt-repos \
+          /tmp/github-apt-repos/venv/bin/activate
+          /tmp/github-apt-repos/venv/bin/github-apt-repos \
             --github-delete-existing \
             --deb-dir debs \
             --github-apt-repo black-desk/ppa \
