@@ -18,6 +18,8 @@ jobs:
           cd github-apt-repos
           pipx install .
       - name: Download all files in watched git repos.
+        env: 
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir debs || exit 255
           cat list.json | jq .repos -r | xargs -I \{\} \
