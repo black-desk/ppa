@@ -35,7 +35,7 @@ jobs:
       - name: Run github-apt-repos.
         run: |
           set +x
-          /tmp/github-apt-repos/venv/bin/activate
+          source /tmp/github-apt-repos/venv/bin/activate
           /tmp/github-apt-repos/venv/bin/github-apt-repos \
             --github-delete-existing \
             --deb-dir debs \
