@@ -43,5 +43,4 @@ jobs:
             --deb-dir debs \
             --github-apt-repo black-desk/ppa \
             --github-token ${{ secrets.GITHUB_TOKEN }} \
-            --gpg-user-id ppa@black-desk.cn \
-          gh release create apt debs/*
+            --gpg-user-id ppa@black-desk.cn
