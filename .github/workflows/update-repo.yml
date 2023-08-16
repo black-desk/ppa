@@ -9,7 +9,7 @@ jobs:
         run: |
           set +x
           sudo apt update
-          sudo apt install dpkg-dev apt-utils gpg libapt-pkg-dev
+          sudo apt install dpkg-dev apt-utils gpg libapt-pkg-dev python-virtualenv
 
           cd /tmp || exit 255
 
