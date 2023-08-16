@@ -8,7 +8,8 @@ jobs:
       - name: Install github-apt-repos.
         run: |
           sudo apt update
-          sudo apt install python-pip dpkg-dev apt-utils gpg
+          sudo apt install dpkg-dev apt-utils gpg libapt-pkg-dev
+
           cd $(
             mktemp -d /tmp/github-apt-repos-XXXXXX || exit 255
           ) || exit 255
