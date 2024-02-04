@@ -3,8 +3,6 @@
 set -x
 set -e
 
-mkdir debs
-cat list.json |
-    jq -r .repos[] |
-        xargs -I \{\} \
-            gh release download -p "*.deb" -D debs -R \{\}
+mkdir -p debs
+
+jq -r 'keys[] as $k | "\($k) \(.[$k])"' <list.json | xargs -n 2 sh -c 'gh release download -p "$2" -D debs -R "$1"'

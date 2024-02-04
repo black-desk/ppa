@@ -1,6 +1,4 @@
 {
-    "repos":[
-        "twpayne/chezmoi",
-        "wez/wezterm"
-    ]
+        "twpayne/chezmoi": "*.deb",
+        "wez/wezterm": "*.Debian12.*.deb"
 }
