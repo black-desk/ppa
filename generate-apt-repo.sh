@@ -7,7 +7,7 @@ cp pub.key debs
 
 cd debs
 
-dpkg-scanpackages . /dev/null > Packages
+dpkg-scanpackages -m . /dev/null > Packages
 
 apt-ftparchive release . > Release
 
