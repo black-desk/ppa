@@ -1,0 +1,21 @@
+name: Checks
+
+on: [pull_request]
+
+jobs:
+  checks:
+    name: Run black-desk/checks
+    permissions:
+      checks: write
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: black-desk/checks@master
+  pass:
+    name: Pass
+    needs: [checks]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder
+        run: true
