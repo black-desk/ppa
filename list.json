@@ -1,4 +1,4 @@
 {
         "twpayne/chezmoi": "*.deb",
-        "wez/wezterm": "*.Debian12*deb"
+        "wez/wezterm": "*.Debian12*.deb"
 }
