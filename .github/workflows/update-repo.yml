@@ -1,5 +1,7 @@
 on:
   push:
+  schedule:
+    - cron:  '0 0 * * 1,3,5'
 jobs:
   update-repo:
     env: 
