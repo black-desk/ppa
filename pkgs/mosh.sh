@@ -7,7 +7,7 @@ git clone https://github.com/mobile-shell/mosh
 
 pushd ./mosh
 
-sudo apt build-deps .
+sudo apt build-dep .
 
 ./build-package.sh
 
