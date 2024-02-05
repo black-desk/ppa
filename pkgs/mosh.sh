@@ -10,6 +10,6 @@ pushd ./mosh
 sudo apt build-dep .
 sudo apt install git-buildpackage
 
-./build-package.sh
+./build-package.sh || true
 
 popd
