@@ -1,5 +1,5 @@
 {
         "twpayne/chezmoi": "*.deb",
-        "black-desk/ppa": "*.deb",
+        "black-desk/debs": "*.deb",
         "wez/wezterm": "*.Debian12*.deb"
 }
