@@ -1,6 +1,6 @@
 {
-        "twpayne/chezmoi": "*.deb",
-        "black-desk/mosh": "*.deb",
         "black-desk/debs": "*.deb",
+        "black-desk/mosh": "*.deb",
+        "twpayne/chezmoi": "*.deb",
         "wez/wezterm": "*.Debian12*.deb"
 }
