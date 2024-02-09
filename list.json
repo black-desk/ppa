@@ -2,5 +2,6 @@
         "black-desk/debs": "*.deb",
         "black-desk/mosh": "*.deb",
         "twpayne/chezmoi": "*.deb",
-        "wez/wezterm": "*.Debian12*.deb"
+        "wez/wezterm": "*.Debian12*.deb",
+        "Eugeny/tabby": "*.deb"
 }
