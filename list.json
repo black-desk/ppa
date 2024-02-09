@@ -3,5 +3,6 @@
         "black-desk/mosh": "*.deb",
         "twpayne/chezmoi": "*.deb",
         "wez/wezterm": "*.Debian12*.deb",
-        "Eugeny/tabby": "*.deb"
+        "Eugeny/tabby": "*.deb",
+        "contour-terminal/contour": "*ubuntu22.04-amd64.deb"
 }
