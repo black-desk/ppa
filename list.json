@@ -1,7 +1,9 @@
 {
+        "Eugeny/tabby": "*.deb",
         "black-desk/debs": "*.deb",
         "black-desk/mosh": "*.deb",
+        "contour-terminal/contour": "*ubuntu22.04-amd64.deb",
+        "jgm/pandoc": "*.deb",
         "twpayne/chezmoi": "*.deb",
-        "wez/wezterm": "*.Debian12*.deb",
-        "Eugeny/tabby": "*.deb"
+        "wez/wezterm": "*.Debian12*.deb"
 }
