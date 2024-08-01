@@ -2,11 +2,11 @@
         "Eugeny/tabby": "*.deb",
         "black-desk/debs": "*.deb",
         "black-desk/mosh": "*.deb",
+        "clash-verge-rev/clash-verge-rev": "*.deb",
         "contour-terminal/contour": "*ubuntu22.04-amd64.deb",
         "jgm/pandoc": "*.deb",
         "shiftkey/desktop": "*.deb",
         "tinygo-org/tinygo": "*.deb",
         "twpayne/chezmoi": "*.deb",
-        "wez/wezterm": "*.Debian12*.deb",
-        "clash-verge-rev/clash-verge-rev": "*.deb"
+        "wez/wezterm": "*.Debian12*.deb"
 }
