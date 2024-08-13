@@ -1,3 +1,5 @@
+name: Update Apt Repository
+
 on:
   push:
     branches:
