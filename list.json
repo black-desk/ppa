@@ -3,7 +3,7 @@
         "black-desk/debs": "*.deb",
         "black-desk/mosh": "*.deb",
         "clash-verge-rev/clash-verge-rev": "*.deb",
-        "contour-terminal/contour": "*ubuntu22.04-amd64.deb",
+        "contour-terminal/contour": "*.deb",
         "jgm/pandoc": "*.deb",
         "shiftkey/desktop": "*.deb",
         "tinygo-org/tinygo": "*.deb",
