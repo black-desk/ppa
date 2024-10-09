@@ -11,4 +11,4 @@ jq -r 'keys[] as $k | "\($k) \(.[$k])"' <list.json |
 
 cd debs
 
-./list.sh | xargs wget --content-disposition
+../list.sh | xargs wget --content-disposition
