@@ -9,5 +9,5 @@
         "shiftkey/desktop": "*.deb",
         "tinygo-org/tinygo": "*.deb",
         "twpayne/chezmoi": "*.deb",
-        "wez/wezterm": "*.Debian12*.deb"
+        "wezterm/wezterm": "*.Debian12*.deb"
 }
