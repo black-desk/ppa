@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# SPDX-FileCopyrightText: 2026 Chen Linxuan <me@black-desk.cn>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 echo "https://discord.com/api/download/stable?platform=linux&format=deb"
 
 echo "https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb"
