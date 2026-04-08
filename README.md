@@ -1,6 +1,6 @@
-# Persional Package Archive
+# Personal Package Archive
 
-Github repository and action to hold my persional deb packages.
+GitHub repository and actions to hold my personal deb packages.
 
 To use this apt software source:
 
@@ -13,10 +13,19 @@ echo "deb https://github.com/black-desk/ppa/releases/latest/download/ ./" | \
 
 ## Packages
 
+From GitHub releases:
+
 - [black-desk/debs](https://github.com/black-desk/debs)
-- [shiftkey/desktop](https://github.com/shiftkey/desktop)
-- [wez/wezterm](https://github.com/twpayne/chezmoi)
+- [mkasberg/ghostty-ubuntu](https://github.com/mkasberg/ghostty-ubuntu)
+- [shiftkey/desktop](https://github.com/shiftkey/desktop) (GitHub Desktop)
+- [wezterm/wezterm](https://github.com/wezterm/wezterm)
+
+Downloaded directly:
+
+- [Discord](https://discord.com)
+- [WeChat (Linux)](https://weixin.qq.com)
+- [QQ (Linux)](https://im.qq.com)
 
 ## Note
 
-These packages might failed to install if you are not using debian sid.
+These packages might fail to install if you are not using Debian sid.
