@@ -1,10 +1,6 @@
 {
-        "Eugeny/tabby": "*.deb",
         "black-desk/debs": "*.deb",
-        "clash-verge-rev/clash-verge-rev": "*.deb",
-        "contour-terminal/contour": "*.deb",
         "mkasberg/ghostty-ubuntu": "*.deb",
         "shiftkey/desktop": "*.deb",
-        "tinygo-org/tinygo": "*.deb",
         "wezterm/wezterm": "*.Debian12*.deb"
 }

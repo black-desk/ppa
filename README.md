@@ -13,12 +13,8 @@ echo "deb https://github.com/black-desk/ppa/releases/latest/download/ ./" | \
 
 ## Packages
 
-- [Eugeny/tabby](https://github.com/Eugeny/tabby)
 - [black-desk/debs](https://github.com/black-desk/debs)
-- [clash-verge-rev/clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)
-- [contour-terminal/contour](https://github.com/contour-terminal/contour)
 - [shiftkey/desktop](https://github.com/shiftkey/desktop)
-- [tinygo-org/tinygo](https://github.com/tinygo-org/tinygo)
 - [wez/wezterm](https://github.com/twpayne/chezmoi)
 
 ## Note
