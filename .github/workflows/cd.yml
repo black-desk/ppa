@@ -1,4 +1,8 @@
-name: Update Apt Repository
+# SPDX-FileCopyrightText: 2025 Chen Linxuan <me@black-desk.cn>
+#
+# SPDX-License-Identifier: MIT
+
+name: Continuous Deployment
 
 on:
   push:
@@ -7,6 +11,7 @@ on:
   schedule:
     - cron:  '0 1 * * *'
   workflow_dispatch:
+
 jobs:
   update-repo:
     env:
